@@ -9,68 +9,99 @@
 		<link rel="stylesheet" type="text/css" href="./style/style.css">
 	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				<div class="top_menu">
-					<nav class="navbar navbar-default">
-						<div class="container-fluid">
-							<div class="navbar-header">
-								<a class="navbar-brand" href="#">Proyecto Jorge Solis</a>
-							</div>
-							<ul class="nav navbar-nav">
-								<li class="active"><a href="#">Home</a></li>
-								<li><a href="#">Proyectos</a></li>
-								<li><a href="#">Personas</a></li>
-								<li><a href="#">Ayuda</a></li>
-							</ul>
+		<div class="container"><!--Top menu de la pagina-->
+		<div class="row">
+			<div class="top_menu">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">Proyecto Jorge Solis</a>
 						</div>
-					</nav>
-				</div>
-			</div>
-			
-		</div>
-		
-		<div class="projectos">
-			<div class="container">
-				<div class="row">
-					<button class="btn btn-primary" id="agregar_proyecto" 	style="margin-left: 1%">Agregar Proyecto</button>
-				</div>
-			</div>
-			
-			
-			<div class="container">
-				<h2>Proyectos agregados</h2>
-				
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>Nombre Proyecto</th>
-							<th>tareas</th>
-							<th>Personas incluidas</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>John</td>
-							<td>Doe</td>
-							<td>john@example.com</td>
-						</tr>
-						<tr>
-							<td>Mary</td>
-							<td>Moe</td>
-							<td>mary@example.com</td>
-						</tr>
-						<tr>
-							<td>July</td>
-							<td>Dooley</td>
-							<td>july@example.com</td>
-						</tr>
-					</tbody>
-				</table>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="./index.html">Proyectos</a></li>
+							<li><a href="#">Personas</a></li>
+							<li><a href="#">Ayuda</a></li>
+						</ul>
+					</div>
+				</nav>
 			</div>
 		</div>
 		
-		<script type="text/javascript" src="./jquery/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="./boostrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-	</body>
+	</div>
+	
+	<div class="projectos"><!--Seccion de Projectos-->
+	<div class="container">
+		<div class="row">
+			<button class="btn btn-primary" id="agregar_proyecto" data-toggle="modal" data-target="#miventana">Agregar Proyecto</button>
+			<div class="modal fade" id="miventana" tabindex="-1" role="dialog" aria-labelledby="myModallabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4>Nuevo Proyecto</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<label>Nombre<input class="form-control" type="text" name="nombre" id="nombre_nuevo_projecto"></label>
+								
+							</form>
+							
+						</div>
+						<div class="modal-footer">
+							<button type="summit" class="btn btn-primary" data-dismiss="modal" id="agregar_nuevo_proyecto">OK</button>
+							<buttonbutton type="button" class="close" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+
+			
+		</div>
+	</div>
+	
+	
+	<div class="container">
+		<h2>Proyectos agregados</h2>
+		
+		<table class="table table-hover" id="Tabla_projectos">
+			<thead id="titulo_tabla">
+				<tr>
+					<th>Nombre Proyecto</th>
+					<th>tareas</th>
+					<th>Personas incluidas</th>
+					<th>Progreso</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>John</td>
+					<td>Doe</td>
+					<td>john@example.com</td>
+					<td> 0%</td>
+				</tr>
+				<tr>
+					<td>Mary</td>
+					<td>Moe</td>
+					<td>mary@example.com</td>
+					<td>0%</td>
+				</tr>
+				<tr>
+					<td>July</td>
+					<td>Dooley</td>
+					<td>july@example.com</td>
+					<td>0%</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript" src="./jquery/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./boostrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="./javascript/logica.js"></script>
+</body>
 </html>
