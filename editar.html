@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" type="text/css" href="./boostrap/bootstrap-3.3.7-dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="./style/style.css">
+	</head>
+	<body>
+			<div class="container"><!--Top menu de la pagina-->
+		<div class="row">
+			<div class="top_menu">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">Proyecto Jorge Solis</a>
+						</div>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="./index.html">Home</a></li>
+							<li><a href="./index.html">Proyectos</a></li>
+							
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		
+	</div>
+			
+
+
+		<div class="container">
+			<div class="row">
+				
+				<H2 id="editarProjecto"></H2>
+			</div>
+			<div class="container">
+				<div class="row">
+					<button class="btn btn-primary" id="agregar_proyecto" data-toggle="modal" data-target="#miventana">Agregar Persona</button>
+					<div class="modal fade" id="miventana" tabindex="-1" role="dialog" aria-labelledby="myModallabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4>Nuevo Persona</h4>
+								</div>
+								<div class="modal-body">
+									<form class="form-group" >
+										<label>Nombre Nueva Persona<input class="form-control" type="text" name="nombre" id="nombre_nuevo_persona" value=""></label>
+										
+									</form>
+									
+								</div>
+								<div class="modal-footer">
+									<div class="form-group">
+										<button type="summit" class="btn btn-primary" data-dismiss="modal" id="agregar_nuevo_proyecto">OK</button>
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+		<div class="container">
+				<div class="row">
+					<button class="btn btn-primary" id="agregar_proyecto" data-toggle="modal" data-target="#miventanaAgregarTarea">Agregar Tarea</button>
+					<div class="modal fade" id="miventanaAgregarTarea" tabindex="-1" role="dialog" aria-labelledby="myModallabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4>Nueva Tarea</h4>
+								</div>
+								<div class="modal-body">
+									<form class="form-group" >
+										<label>Nombre Nueva Tarea<input class="form-control" type="text" name="nombre" id="nombre_nuevo_tarea" value=""></label>
+										
+									</form>
+									
+								</div>
+								<div class="modal-footer">
+									<div class="form-group">
+										<button type="summit" class="btn btn-primary" data-dismiss="modal" id="AgregarTarea">OK</button>
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<div>
+				<table class="table table-hover" id="Tabla_projectos">
+					<thead id="titulo_tabla">
+						<tr>
+							<th>Colaborador</th>
+							<th>Por hacer</th>
+							<th>En progreso</th>
+							<th>Listo</th>
+						</tr>
+					</thead>
+					<tbody id="tbDestino">
+						<th id="colaborador"></th>
+						<th id="porHacer" ondrop="drop(event)" ondragover="allowDrop(event)""></th>
+						<th id="enprogreso" ondrop="drop(event)" ondragover="allowDrop(event)""></th>
+						<th id="listo" ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script type="text/javascript" src="./jquery/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="./boostrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="./javascript/logicaedita.js"></script>
+	</body>
+</html>
