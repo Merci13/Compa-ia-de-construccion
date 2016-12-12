@@ -18,10 +18,9 @@
 							<a class="navbar-brand" href="#">Proyecto Jorge Solis</a>
 						</div>
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Home</a></li>
+							<li class="active"><a href="./index.html">Home</a></li>
 							<li><a href="./index.html">Proyectos</a></li>
-							<li><a href="#">Personas</a></li>
-							<li><a href="#">Ayuda</a></li>
+						
 						</ul>
 					</div>
 				</nav>
@@ -42,11 +41,58 @@
 							<h4>Nuevo Proyecto</h4>
 						</div>
 						<div class="modal-body">
-							<form>
-								<label>Nombre<input class="form-control" type="text" name="nombre" id="nombre_nuevo_projecto"></label>
+							<form class="form-group" >
+								<label>Nombre<input class="form-control" type="text" name="nombre" id="nombre_nuevo_projecto" value=""></label>
 								
 							</form>
 							
+						</div>
+						<div class="modal-footer">
+							<div class="form-group">
+								<button type="summit" class="btn btn-primary" data-dismiss="modal" id="agregar_nuevo_proyecto">OK</button>
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<div class="container">
+		<h2>Proyectos agregados</h2>
+		
+		<table class="table table-hover" id="Tabla_projectos">
+			<thead id="titulo_tabla">
+				<tr>
+					<th>Nombre Proyecto</th>
+					<th>tareas</th>
+					<th>Personas incluidas</th>
+					<th>Progreso</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody id="tbDestino">
+
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<button class="btn-primary" id="clear">
+		Limpiar
+		</button>
+	</div>
+</div>
+<script type="text/javascript" src="./jquery/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./boostrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="./javascript/logica.js"></script>
+</body>
+</html>
 						</div>
 						<div class="modal-footer">
 							<button type="summit" class="btn btn-primary" data-dismiss="modal" id="agregar_nuevo_proyecto">OK</button>
