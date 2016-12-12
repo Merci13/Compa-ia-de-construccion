@@ -115,6 +115,91 @@
 				</table>
 			</div>
 		</div>
+
+		
+		<div id="graficio_tareas_por_proyecto"><!--div para el primer grafico-->
+
+			
+		</div>
+		<div id="graficio_tareas_por_persona"><!--div para el primer grafico-->
+
+			
+		</div>
+
+		<script type="text/javascript" src="./jquery/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="./boostrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="./javascript/highcharts.js"></script>
+		<script type="text/javascript" src="./javascript/logicaedita.js"></script>
+	</body>
+</html>
+									<form class="form-group" >
+										<label>Nombre Nueva Persona<input class="form-control" type="text" name="nombre" id="nombre_nuevo_persona" value=""></label>
+										
+									</form>
+									
+								</div>
+								<div class="modal-footer">
+									<div class="form-group">
+										<button type="summit" class="btn btn-primary" data-dismiss="modal" id="agregar_nuevo_proyecto">OK</button>
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+		<div class="container">
+				<div class="row">
+					<button class="btn btn-primary" id="agregar_proyecto" data-toggle="modal" data-target="#miventanaAgregarTarea">Agregar Tarea</button>
+					<div class="modal fade" id="miventanaAgregarTarea" tabindex="-1" role="dialog" aria-labelledby="myModallabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4>Nueva Tarea</h4>
+								</div>
+								<div class="modal-body">
+									<form class="form-group" >
+										<label>Nombre Nueva Tarea<input class="form-control" type="text" name="nombre" id="nombre_nuevo_tarea" value=""></label>
+										
+									</form>
+									
+								</div>
+								<div class="modal-footer">
+									<div class="form-group">
+										<button type="summit" class="btn btn-primary" data-dismiss="modal" id="AgregarTarea">OK</button>
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<div>
+				<table class="table table-hover" id="Tabla_projectos">
+					<thead id="titulo_tabla">
+						<tr>
+							<th>Colaborador</th>
+							<th>Por hacer</th>
+							<th>En progreso</th>
+							<th>Listo</th>
+						</tr>
+					</thead>
+					<tbody id="tbDestino">
+						<th id="colaborador"></th>
+						<th id="porHacer" ondrop="drop(event)" ondragover="allowDrop(event)""></th>
+						<th id="enprogreso" ondrop="drop(event)" ondragover="allowDrop(event)""></th>
+						<th id="listo" ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+					</tbody>
+				</table>
+			</div>
+		</div>
 		<script type="text/javascript" src="./jquery/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="./boostrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="./javascript/logicaedita.js"></script>
